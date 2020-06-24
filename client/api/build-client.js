@@ -3,8 +3,16 @@ import axios from 'axios';
 export default ({ req }) => {
   if (typeof window === 'undefined') {
     // from Server
+    let url = '';
+
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+      url = 'http://nginx-ingress-controller.kube-system.svc.cluster.local';
+    } else {
+      url = 'http://ticketswapping.xyz/';
+    }
+
     return axios.create({
-      baseURL: 'http://nginx-ingress-controller.kube-system.svc.cluster.local',
+      baseURL: url,
       headers: req.headers,
     });
   } else {
