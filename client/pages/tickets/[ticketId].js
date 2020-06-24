@@ -34,7 +34,7 @@ const TicketShow = ({ ticket, currentUser }) => {
   return (
     <div>
       <h1>{ticket.title}</h1>
-      <h4>Price: {ticket.price}</h4>
+      <h5>Price: {ticket.price}</h5>
       {errors}
       {purchaseBtn()}
     </div>
