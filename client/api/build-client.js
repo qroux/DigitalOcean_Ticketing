@@ -5,11 +5,8 @@ export default ({ req }) => {
     // from Server
     const url = 'http://ticketswapping.xyz/';
 
-    // if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
     //   url = 'http://nginx-ingress-controller.kube-system.svc.cluster.local';
-    // } else {
     //   url = 'http://ticketswapping.xyz/';
-    // }
 
     return axios.create({
       baseURL: url,
