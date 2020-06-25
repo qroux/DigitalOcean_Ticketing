@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default ({ currentUser }) => {
   const links = [
     !currentUser && { label: 'Sign Up', href: '/auth/signup' },
-    !currentUser && { label: 'Sign In', href: '/auth/signin' },
+    !currentUser && { label: 'Log in', href: '/auth/signin' },
     currentUser && { label: 'Sell Ticket', href: '/tickets/new' },
     currentUser && { label: 'My Orders', href: '/orders' },
     currentUser && { label: 'Sign Out', href: '/auth/signout' },
@@ -13,7 +13,9 @@ export default ({ currentUser }) => {
       return (
         <li key={href}>
           <Link href={href}>
-            <a className="nav-link">{label}</a>
+            <a className="nav-link" style={{ color: 'black' }}>
+              {label}
+            </a>
           </Link>
         </li>
       );
@@ -22,7 +24,7 @@ export default ({ currentUser }) => {
   return (
     <nav className="navbar navbar-light bg-light">
       <Link href="/">
-        <a className="navbar-brand">Ticketing.com</a>
+        <a className="navbar-brand">Swapping</a>
       </Link>
       <div className="d-flex justify-content-end">
         <ul className="nav d-flex align-items-center">{links}</ul>

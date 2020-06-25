@@ -13,19 +13,21 @@ const OrderIndex = ({ currentUser, orders }) => {
 
   return (
     <div>
-      <h1>Orders History</h1>
-      <h5>(Account: {currentUser.email})</h5>
-      <table className="table mt-5">
-        <thead>
-          <tr>
-            <th>Order ID</th>
-            <th>Ticket</th>
-            <th>Price</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>{orderList}</tbody>
-      </table>
+      <h1 className="text-light text-center">Orders History</h1>
+      <div className="bg-light rounded p-5 mt-5">
+        <h5>Account: {currentUser.email}</h5>
+        <table className="table mt-3">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Ticket</th>
+              <th>Price</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>{orderList}</tbody>
+        </table>
+      </div>
     </div>
   );
 };
