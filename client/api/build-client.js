@@ -3,7 +3,7 @@ import axios from 'axios';
 export default ({ req }) => {
   if (typeof window === 'undefined') {
     // from Server
-    const url = 'http://nginx-ingress-controller.kube-system.svc.cluster.local';
+    const url = 'http://ticketswapping.xyz/';
 
     // if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
     //   url = 'http://nginx-ingress-controller.kube-system.svc.cluster.local';
