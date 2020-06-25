@@ -34,14 +34,30 @@ const OrderShow = ({ order, currentUser }) => {
 
   return (
     <div>
+      <h1 className="text-center text-light">Payment</h1>
       {errors}
-      <div>Time left to pay: {timeLeft} seconds</div>
-      <StripeCheckout
-        token={({ id }) => doRequest({ token: id })}
-        stripeKey="pk_test_DndeUtX95wNk2199Jh90AzLi"
-        amount={order.ticket.price * 100}
-        email={currentUser.email}
-      />
+      <div className="bg-light rounded mt-5 p-5">
+        <div className="d-flex justify-content-between">
+          <h3>Order Information </h3>
+          <p>Time left to pay: {timeLeft} seconds</p>
+        </div>
+        <hr />
+        <p>Order ID: {order.id}</p>
+        <p>Ticket: {order.ticket.title}</p>
+        <br />
+        <p>
+          Price: <strong>{order.ticket.price}€</strong>{' '}
+        </p>
+
+        <div className="text-center mt-4">
+          <StripeCheckout
+            token={({ id }) => doRequest({ token: id })}
+            stripeKey="pk_test_DndeUtX95wNk2199Jh90AzLi"
+            amount={order.ticket.price * 100}
+            email={currentUser.email}
+          />
+        </div>
+      </div>
     </div>
   );
 };

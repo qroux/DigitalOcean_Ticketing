@@ -20,27 +20,35 @@ export default () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <h1>Sign Up</h1>
-      {errors}
-      <div className="form-group">
-        <label>Email Adress</label>
-        <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="form-control"
-        />
+    <div>
+      <div>
+        <h1 className="text-center text-light mb-5">Sign Up</h1>
       </div>
-      <div className="form-group">
-        <label>Password</label>
-        <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          type="password"
-          className="form-control"
-        />
+      <div className="bg-light rounded p-5">
+        <form onSubmit={onSubmit}>
+          {errors}
+          <div className="form-group">
+            <label>Email Adress</label>
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="form-control"
+            />
+          </div>
+          <div className="form-group">
+            <label>Password</label>
+            <input
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+              className="form-control"
+            />
+          </div>
+          <div className="text-center pt-4">
+            <button className="btn btn-lg btn-primary">sign up</button>
+          </div>
+        </form>
       </div>
-      <button className="btn btn-primary">Sign Up</button>
-    </form>
+    </div>
   );
 };
