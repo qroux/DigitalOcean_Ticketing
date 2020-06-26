@@ -16,7 +16,7 @@ const OrderIndex = ({ currentUser, orders }) => {
       <h1 className="text-light text-center">Orders History</h1>
       <div className="bg-light rounded p-5 mt-5">
         <h5>Account: {currentUser.email}</h5>
-        <table className="table mt-3">
+        <table className="table-responsive mt-3">
           <thead>
             <tr>
               <th>Order ID</th>
