@@ -1,5 +1,6 @@
 import useRequest from '../../hooks/use-request';
 import Router from 'next/router';
+import { motion } from 'framer-motion';
 
 const TicketShow = ({ ticket, currentUser }) => {
   const { doRequest, errors } = useRequest({
@@ -32,7 +33,11 @@ const TicketShow = ({ ticket, currentUser }) => {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="card mb-3" syle={{ mawWidth: '540px' }}>
         <div className="row no-gutters">
           <div className="col-md-4">
@@ -57,7 +62,7 @@ const TicketShow = ({ ticket, currentUser }) => {
         </div>
       </div>
       {errors}
-    </div>
+    </motion.div>
   );
 };
 

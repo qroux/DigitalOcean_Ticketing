@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import useRequest from '../../hooks/use-request';
 import Router from 'next/router';
+import { motion } from 'framer-motion';
 
 const OrderShow = ({ order, currentUser }) => {
   const [timeLeft, setTimeLeft] = useState(0);
@@ -28,12 +29,40 @@ const OrderShow = ({ order, currentUser }) => {
     };
   }, [order]);
 
+  if (order.status === 'complete') {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="bg-light rounded p-5 d-flex justify-content-between"
+      >
+        <h4>Order: {order.id}</h4>
+        <h4 className="text-success">Paid</h4>
+      </motion.div>
+    );
+  }
+
   if (timeLeft < 0) {
-    return <div>Order Expired</div>;
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="bg-light rounded p-5 d-flex justify-content-between"
+      >
+        <h4>Order: {order.id}</h4>
+        <h4 className="text-danger">Expired</h4>
+      </motion.div>
+    );
   }
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <h1 className="text-center text-light">Payment</h1>
       {errors}
       <div className="bg-light rounded mt-5 p-5">
@@ -58,7 +87,7 @@ const OrderShow = ({ order, currentUser }) => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import useRequest from '../../hooks/use-request';
 import Router from 'next/router';
+import { motion } from 'framer-motion';
 
 const NewTicket = () => {
   const [title, setTitle] = useState('');
@@ -23,7 +24,11 @@ const NewTicket = () => {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <h1 className="text-center text-light">Create a ticket</h1>
       <div className="bg-light rounded mt-5 p-5">
         {errors}
@@ -50,7 +55,7 @@ const NewTicket = () => {
           </div>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

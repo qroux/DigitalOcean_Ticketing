@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Router from 'next/router';
+import { motion } from 'framer-motion';
 
 import useRequest from '../../hooks/use-request';
 
@@ -20,7 +21,11 @@ export default () => {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div>
         <h1 className="text-center text-light mb-5">Sign Up</h1>
       </div>
@@ -49,6 +54,6 @@ export default () => {
           </div>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };

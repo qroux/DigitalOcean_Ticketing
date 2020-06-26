@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import buildClient from '../api/build-client';
 
 import Header from '../components/header';
-import Head from 'next/head';
+import { AnimatePresence } from 'framer-motion';
 
 const AppComponent = ({ Component, pageProps, currentUser }) => {
   return (
@@ -15,7 +15,9 @@ const AppComponent = ({ Component, pageProps, currentUser }) => {
     >
       <Header currentUser={currentUser} />
       <div className="container mt-5 py-5 rounded">
-        <Component currentUser={currentUser} {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <Component currentUser={currentUser} {...pageProps} />
+        </AnimatePresence>
       </div>
     </div>
   );

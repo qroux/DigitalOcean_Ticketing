@@ -4,8 +4,8 @@ export default ({ req }) => {
   if (typeof window === 'undefined') {
     // from Server
     const url = 'http://ticketswapping.xyz/';
+    // const url = 'http://nginx-ingress-controller.kube-system.svc.cluster.local';
 
-    //   url = 'http://nginx-ingress-controller.kube-system.svc.cluster.local';
     //   url = 'http://ticketswapping.xyz/';
 
     return axios.create({
