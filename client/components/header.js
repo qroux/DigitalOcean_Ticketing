@@ -11,7 +11,7 @@ export default ({ currentUser }) => {
     .filter((linkConfig) => linkConfig)
     .map(({ label, href }) => {
       return (
-        <li key={href}>
+        <li className="nav-item" key={href}>
           <Link href={href}>
             <a className="nav-link" style={{ color: 'black' }}>
               {label}
@@ -22,12 +22,25 @@ export default ({ currentUser }) => {
     });
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link href="/">
         <a className="navbar-brand">Swapping</a>
       </Link>
-      <div className="d-flex justify-content-end">
-        <ul className="nav d-flex align-items-center">{links}</ul>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#nav-toggler"
+        aria-controls="nav-toggler"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div className="collapse navbar-collapse" id="nav-toggler">
+        <ul className="navbar-nav ml-auto mt-2 mt-lg-0">{links}</ul>
       </div>
     </nav>
   );
