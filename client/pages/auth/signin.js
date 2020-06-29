@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Router from 'next/router';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import useRequest from '../../hooks/use-request';
@@ -22,27 +23,27 @@ export default () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: '30px' }}
+      animate={{ opacity: 1, y: '0px' }}
+      exit={{ opacity: 0, y: '30px' }}
     >
       <div>
         <h1 className="text-center text-light mb-5">Log In</h1>
       </div>
-      <div className="bg-light rounded p-5">
+      <div className="p-5">
         <form onSubmit={onSubmit}>
           {errors}
           <div className="form-group">
-            <label>Email Adress</label>
             <input
+              placeholder="e-mail@mail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="form-control"
             />
           </div>
           <div className="form-group">
-            <label>Password</label>
             <input
+              placeholder="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               type="password"
@@ -50,7 +51,7 @@ export default () => {
             />
           </div>
           <div className="text-center pt-4">
-            <button className="btn btn-lg btn-primary">log in</button>
+            <button className="btn btn-lg btn-warning">log in</button>
           </div>
         </form>
       </div>

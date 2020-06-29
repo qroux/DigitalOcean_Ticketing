@@ -16,7 +16,7 @@ const TicketShow = ({ ticket, currentUser }) => {
   const purchaseBtn = () => {
     if (currentUser) {
       return (
-        <button onClick={() => doRequest()} className="btn btn-primary">
+        <button onClick={() => doRequest()} className="btn btn-warning">
           Purchase
         </button>
       );
@@ -25,7 +25,7 @@ const TicketShow = ({ ticket, currentUser }) => {
     return (
       <button
         onClick={() => Router.push('/auth/signin')}
-        className="btn btn-primary"
+        className="btn btn-warning"
       >
         Pruchase
       </button>
@@ -34,11 +34,12 @@ const TicketShow = ({ ticket, currentUser }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: '30px' }}
+      animate={{ opacity: 1, y: '0px' }}
+      exit={{ opacity: 0, y: '30px' }}
     >
-      <div className="card mb-3" syle={{ mawWidth: '540px' }}>
+      <h1 className="text-center text-light">Ticket details</h1>
+      <div className="card mb-3 mt-5" syle={{ mawWidth: '540px' }}>
         <div className="row no-gutters">
           <div className="col-md-4">
             <img

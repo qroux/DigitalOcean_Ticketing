@@ -25,25 +25,25 @@ const NewTicket = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: '30px' }}
+      animate={{ opacity: 1, y: '0px' }}
+      exit={{ opacity: 0, y: '30px' }}
     >
-      <h1 className="text-center text-light">Create a ticket</h1>
-      <div className="bg-light rounded mt-5 p-5">
+      <h1 className="text-center text-light">Sell your ticket</h1>
+      <div className="mt-5 pt-4 pb-2 px-5">
         {errors}
         <form onSubmit={onSubmit}>
           <div className="form-group">
-            <label>Title</label>
             <input
+              placeholder="Title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               className="form-control"
             />
           </div>
           <div className="form-group">
-            <label>Price</label>
             <input
+              placeholder="Price"
               value={price}
               onBlur={onBlur}
               onChange={(e) => setPrice(e.target.value)}
@@ -51,7 +51,7 @@ const NewTicket = () => {
             />
           </div>
           <div className="text-center">
-            <button className="btn btn-primary">Submit</button>
+            <button className="btn btn-warning">Submit</button>
           </div>
         </form>
       </div>
