@@ -32,13 +32,19 @@ const OrderShow = ({ order, currentUser }) => {
   if (order.status === 'complete') {
     return (
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="bg-light rounded p-5 d-flex justify-content-between"
+        initial={{ opacity: 0, y: '30px' }}
+        animate={{ opacity: 1, y: '0px' }}
+        exit={{ opacity: 0, y: '30px' }}
       >
-        <h4>Order: {order.id}</h4>
-        <h4 className="text-success">Paid</h4>
+        <div
+          className="bg-light rounded p-5 d-flex justify-content-between align-items-center"
+          style={{ breakWord: 'break-all' }}
+        >
+          <div>{order.id}</div>
+          <div className="text-success">
+            <strong>Paid</strong>
+          </div>
+        </div>
       </motion.div>
     );
   }
@@ -46,29 +52,33 @@ const OrderShow = ({ order, currentUser }) => {
   if (timeLeft < 0) {
     return (
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="bg-light rounded p-5 d-flex justify-content-between"
+        initial={{ opacity: 0, y: '30px' }}
+        animate={{ opacity: 1, y: '0px' }}
+        exit={{ opacity: 0, y: '30px' }}
       >
-        <h4>Order: {order.id}</h4>
-        <h4 className="text-danger">Expired</h4>
+        <div
+          className="bg-light rounded p-5 d-flex justify-content-between"
+          style={{ breakWord: 'break-all' }}
+        >
+          <h4>{order.id}</h4>
+          <h4 className="text-danger">Expired</h4>
+        </div>
       </motion.div>
     );
   }
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: '30px' }}
+      animate={{ opacity: 1, y: '0px' }}
+      exit={{ opacity: 0, y: '30px' }}
     >
       <h1 className="text-center text-light">Payment</h1>
       {errors}
       <div className="bg-light rounded mt-5 p-5">
         <div className="d-flex justify-content-between">
           <h3>Order Information </h3>
-          <p>Time left to pay: {timeLeft} seconds</p>
+          <p className="ml-3">Time left to pay: {timeLeft} seconds</p>
         </div>
         <hr />
         <p>Order ID: {order.id}</p>

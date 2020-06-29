@@ -3,6 +3,7 @@ import buildClient from '../api/build-client';
 
 import Header from '../components/header';
 import { AnimatePresence } from 'framer-motion';
+import Head from 'next/head';
 
 const AppComponent = ({ Component, pageProps, currentUser }) => {
   return (
@@ -13,6 +14,13 @@ const AppComponent = ({ Component, pageProps, currentUser }) => {
         backgroundSize: 'cover',
       }}
     >
+      <Head>
+        <link href="/static/styles.css" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Montserrat:wght@500&family=Permanent+Marker&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <Header currentUser={currentUser} />
       <div className="container mt-5 py-5 rounded">
         <AnimatePresence exitBeforeEnter>

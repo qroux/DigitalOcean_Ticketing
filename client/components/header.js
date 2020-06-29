@@ -24,19 +24,23 @@ export default ({ currentUser }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link href="/">
-        <a className="navbar-brand">Swapping</a>
+        <a className="navbar-brand">T-Swapping</a>
       </Link>
 
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#nav-toggler"
         aria-controls="nav-toggler"
         aria-expanded="false"
         aria-label="Toggle navigation"
+        onClick={(e) => {
+          const element = document.getElementById('nav-toggler');
+          element.classList.toggle('show');
+        }}
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
 
       <div className="collapse navbar-collapse" id="nav-toggler">

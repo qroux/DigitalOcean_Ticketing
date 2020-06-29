@@ -7,7 +7,7 @@ const LandingPage = ({ currentUser, tickets }) => {
     return (
       <tr key={ticket.id}>
         <td className="">{ticket.title}</td>
-        <td>{ticket.price}</td>
+        <td>{ticket.price} €</td>
         <td>
           <Link href="/tickets/[ticketId]" as={`/tickets/${ticket.id}`}>
             <a>view</a>
@@ -19,9 +19,9 @@ const LandingPage = ({ currentUser, tickets }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: '30px' }}
+      animate={{ opacity: 1, y: '0px' }}
+      exit={{ opacity: 0, y: '30px' }}
     >
       <div className="mb-5 font-weight-light text-center text-light">
         <h1>Buy / Sell your tickets in minutes</h1>

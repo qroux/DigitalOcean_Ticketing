@@ -20,9 +20,9 @@ const OrderIndex = ({ currentUser, orders }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: '30px' }}
+      animate={{ opacity: 1, y: '0px' }}
+      exit={{ opacity: 0, y: '30px' }}
     >
       <h1 className="text-light text-center">Orders History</h1>
       <div className="bg-light rounded p-5 mt-5">
