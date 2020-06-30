@@ -60,8 +60,10 @@ const OrderShow = ({ order, currentUser }) => {
           className="bg-light rounded p-5 d-flex justify-content-between"
           style={{ breakWord: 'break-all' }}
         >
-          <h4>{order.id}</h4>
-          <h4 className="text-danger">Expired</h4>
+          <div>{order.id}</div>
+          <div className="text-danger">
+            <strong>Expired</strong>
+          </div>
         </div>
       </motion.div>
     );
