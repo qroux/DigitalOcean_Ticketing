@@ -57,7 +57,7 @@ const TicketShow = ({ ticket, currentUser }) => {
                 Aliquam nec dictum velit. Vivamus et ipsum mi. Phasellus id
                 tristique ante. Praesent bibendum placerat tempus.
               </p>
-              <div className="text-right mt-5">{purchaseBtn()}</div>
+              <div className="text-right mt-5 mr-3">{purchaseBtn()}</div>
             </div>
           </div>
         </div>
