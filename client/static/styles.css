@@ -19,3 +19,9 @@ h1 {
 .navbar-brand {
   font-family: 'Holtwood One SC';
 }
+
+/* New ticket */
+
+.new-ticket-form {
+  background-color: red;
+}

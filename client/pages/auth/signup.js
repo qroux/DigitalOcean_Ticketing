@@ -32,7 +32,10 @@ export default () => {
       <div className="p-5">
         <form onSubmit={onSubmit}>
           {errors}
-          <div className="form-group">
+          <div className="input-group">
+            <div className="input-group-prepend">
+              <span className="input-group-text">@</span>
+            </div>
             <input
               placeholder="e-mail@mail.com"
               value={email}
@@ -40,7 +43,10 @@ export default () => {
               className="form-control"
             />
           </div>
-          <div className="form-group">
+          <div className="input-group my-2">
+            <div className="input-group-prepend">
+              <span className="input-group-text">***</span>
+            </div>
             <input
               placeholder="password"
               value={password}

@@ -5,7 +5,7 @@ import Header from '../components/header';
 import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 
-const AppComponent = ({ Component, pageProps, currentUser }) => {
+const AppComponent = ({ Component, pageProps, currentUser, router }) => {
   return (
     <div
       style={{
@@ -24,7 +24,11 @@ const AppComponent = ({ Component, pageProps, currentUser }) => {
       <Header currentUser={currentUser} />
       <div className="container mt-5 py-5 rounded">
         <AnimatePresence exitBeforeEnter>
-          <Component currentUser={currentUser} {...pageProps} />
+          <Component
+            currentUser={currentUser}
+            {...pageProps}
+            key={router.route}
+          />
         </AnimatePresence>
       </div>
     </div>
