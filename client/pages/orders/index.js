@@ -25,9 +25,11 @@ const OrderIndex = ({ currentUser, orders }) => {
       exit={{ opacity: 0, y: '30px' }}
     >
       <h1 className="text-light text-center">Orders History</h1>
-      <div className="bg-light rounded p-5 mt-5">
-        <h5>Account: {currentUser.email}</h5>
-        <div className="table-responsive">
+      <div className="mt-5">
+        <h5 className="bg-light rounded px-5 py-3">
+          <strong>Account: {currentUser.email}</strong>
+        </h5>
+        <div className="table-responsive bg-light rounded px-5 py-3">
           <table className="table mt-3">
             <thead>
               <tr>

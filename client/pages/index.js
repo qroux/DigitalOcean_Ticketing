@@ -26,10 +26,16 @@ const LandingPage = ({ currentUser, tickets }) => {
       <div className="mb-5 font-weight-light text-center text-light">
         <h1>Buy / Sell your tickets in minutes</h1>
       </div>
-      <div className="bg-light rounded p-5">
-        <h4>Last tickets : {tickets.length}</h4>
-        <div className="table-responsive">
-          <table className="table mt-4">
+      <div className="">
+        <div className="d-flex justify-content-between bg-light  px-5 py-3 rounded">
+          <h4 className=" ">
+            <strong>Last tickets</strong>
+          </h4>
+          <h4 className="mr-3">{tickets.length}</h4>
+        </div>
+
+        <div className="table-responsive bg-light  px-5 py-3 mt-2 rounded">
+          <table className="table">
             <thead>
               <tr>
                 <th>Title</th>

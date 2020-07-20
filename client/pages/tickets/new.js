@@ -33,7 +33,10 @@ const NewTicket = () => {
       <div className="mt-5 pt-4 pb-2 px-5">
         {errors}
         <form onSubmit={onSubmit}>
-          <div className="form-group">
+          <div className="input-group">
+            <div className="input-group-prepend">
+              <span className="input-group-text">Aa</span>
+            </div>
             <input
               placeholder="Title"
               value={title}
@@ -41,7 +44,10 @@ const NewTicket = () => {
               className="form-control"
             />
           </div>
-          <div className="form-group">
+          <div className="input-group my-2">
+            <div className="input-group-prepend">
+              <span className="input-group-text">$</span>
+            </div>
             <input
               placeholder="Price"
               value={price}
