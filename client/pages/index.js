@@ -34,7 +34,7 @@ const LandingPage = ({ currentUser, tickets }) => {
           <h4 className="mr-3">{tickets.length}</h4>
         </div>
 
-        <div className="table-responsive bg-light  px-5 pb-3 mt-2 rounded">
+        <div className="table-responsive bg-light px-5 pb-3 mt-2 rounded">
           <table className="table">
             <thead>
               <tr>
