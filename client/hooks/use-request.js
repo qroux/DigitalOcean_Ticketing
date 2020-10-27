@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import styles from '../styles/Error.module.scss'
 
 export default ({ url, method, body, onSuccess }) => {
   const [errors, setErrors] = useState(null);
@@ -16,11 +17,11 @@ export default ({ url, method, body, onSuccess }) => {
       return response.data;
     } catch (err) {
       setErrors(
-        <div className="alert alert-danger">
-          <h4>Ooops....</h4>
-          <ul className="my-0">
+        <div className={styles.error}>
+          <h4 className={styles.error__heading}>Ooops....</h4>
+          <ul className={styles.error__list}>
             {err.response.data.errors.map((err) => (
-              <li key={err.message}>{err.message}</li>
+              <li key={err.message} className={styles.error__item}>{err.message}</li>
             ))}
           </ul>
         </div>

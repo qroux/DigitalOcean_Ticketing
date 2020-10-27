@@ -1,0 +1,102 @@
+@import './variables';
+@import './pages';
+
+.home {
+  &__layout {
+  }
+
+  &__container {
+    @include Container;
+    padding: 15rem 0;
+
+    // border: 1px solid white;
+  }
+
+  &__heading {
+    text-align: center;
+    padding: 10rem 0rem;
+    text-transform: capitalize;
+  }
+}
+
+.tickets {
+  &__layout {
+    background-color: rgba($bg-light, 0.849);
+    min-height: 30vh;
+  }
+  &__container {
+    @include Container;
+
+    max-width: 150rem;
+    padding: 5rem 0;
+  }
+
+  &__heading {
+    font-weight: 300;
+    color: $text-dark;
+    // font-family: Roboto;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+  }
+
+  &__items {
+    // border: 1px solid white;
+    padding: 0rem 0;
+  }
+
+  &__item {
+    // border: 1px solid red;
+    background-color: $bg-light;
+    color: $text-dark;
+    font-size: 3rem;
+    font-family: Roboto;
+    box-shadow: 0 1rem 2rem rgba($color: black, $alpha: 0.2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 5rem;
+    border-radius: 3px;
+    transition: transform 0.5s;
+
+    &:hover {
+      // transform: translateY(-2px);
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+
+    &__icon {
+      width: 6rem;
+      margin-right: 5rem;
+    }
+
+    &__title {
+      flex: 1;
+      font-weight: 500;
+      // border: 1px solid red;
+    }
+
+    &__price {
+      flex: 0.2;
+      text-align: center;
+      font-family: Roboto;
+      font-weight: 100;
+      font-size: 4rem;
+    }
+
+    &__click {
+      width: 5rem;
+      text-align: center;
+      font-family: Roboto;
+      font-size: 3rem;
+      font-weight: 100;
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: darken($bg-light, 10%);
+      }
+    }
+  }
+}

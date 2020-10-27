@@ -1,0 +1,16 @@
+@import './variables';
+@import './pages';
+
+.error {
+  // border: 1px solid $primary;
+  margin-bottom: 5rem;
+
+  &__heading {
+  }
+
+  &__list {
+    font-family: Roboto, sans-serif;
+    font-size: 2rem;
+    list-style: none;
+  }
+}
