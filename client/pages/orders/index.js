@@ -33,7 +33,7 @@ const OrderIndex = ({ currentUser, orders }) => {
           <table className="table mt-3">
             <thead>
               <tr>
-                <th>Order ID</th>
+                <th>Order id</th>
                 <th>Ticket</th>
                 <th>Price</th>
                 <th>Status</th>
