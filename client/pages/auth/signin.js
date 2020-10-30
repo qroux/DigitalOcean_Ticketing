@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Router from 'next/router';
-import Head from 'next/head';
 import { motion } from 'framer-motion';
 import styles from "../../styles/Form.module.scss"
 
@@ -28,7 +27,7 @@ export default function SignIn() {
       animate={{ opacity: 1, y: '0px' }}
       exit={{ opacity: 0, y: '30px' }}
     >
-            <div className={styles.form__layout}>
+      <div className={styles.form__layout}>
         <div className={styles.form__container}>
           <div className={styles.form__left}>
             {/* <h3 className={styles.form__left__heading}>Welcome</h3> */}
