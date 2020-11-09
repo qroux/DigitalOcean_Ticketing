@@ -12,7 +12,7 @@
 - **Type**: asynchronous communication
 - **Concurrency**: Optimistic Concurrency Control
 
-<h3>Services</h3>
+<h3>Services List</h3>
 
 - **common**: library that enable each service to decode JWT and avoid auth-service dependency
 
