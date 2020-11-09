@@ -59,13 +59,8 @@ export default function TicketShow({ticket, currentUser }) {
               </div>
             </div>
           </div>
-
-
-
         </div>
-
       </div>
-
     </motion.div>
 
   )

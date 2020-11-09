@@ -1,0 +1,59 @@
+@import './variables';
+@import './pages';
+
+.index {
+  &__layout {
+  }
+
+  &__container {
+    @include Container;
+    padding-top: 10rem;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__identification {
+    background-color: rgba(white, 0.9);
+    margin-top: 5rem;
+    padding: 2.5rem 5rem;
+    border-radius: 3px;
+
+    &__heading {
+      color: $text-dark;
+      font-weight: 300;
+      font-family: Roboto, sans-serif;
+    }
+  }
+
+  &__orders {
+    margin-top: 2rem;
+    padding: 2.5rem;
+    background-color: rgba(white, 0.9);
+
+    &__item {
+      background-color: rgba(white, 1);
+      padding: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1rem 2rem rgba($color: black, $alpha: 0.2);
+    }
+  }
+
+  &__order {
+    // color: $text-dark;
+    // font-size: 3rem;
+
+    &__link {
+      color: $text-dark;
+      font-size: 3rem;
+    }
+
+    &__item {
+      color: $text-dark;
+      font-size: 3rem;
+    }
+  }
+}
