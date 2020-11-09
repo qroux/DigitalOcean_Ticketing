@@ -2,6 +2,9 @@
 
 <h2>http://www.ticketswapping.xyz/</h2>
 
+
+<h3>Stack</h3>
+
 - **Front**: React | Next.js
 - **Back**: Node.js | TypeScript | Jest | MongoDB
 - **Deployment**: Kubernetes | Docker
