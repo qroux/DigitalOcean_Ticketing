@@ -40,6 +40,14 @@
       align-items: center;
       box-shadow: 0 1rem 2rem rgba($color: black, $alpha: 0.2);
     }
+
+    &__empty {
+      color: $text-dark;
+      font-size: 2rem;
+      font-family: Roboto, sans-serif;
+      font-weight: 300;
+      padding: 0 2.5rem;
+    }
   }
 
   &__order {
@@ -49,11 +57,20 @@
     &__link {
       color: $text-dark;
       font-size: 3rem;
+      font-weight: 300;
+      font-family: Roboto, sans-serif;
+
+      &__details {
+        font-size: 2rem;
+        font-weight: 600;
+      }
     }
 
     &__item {
       color: $text-dark;
       font-size: 3rem;
+      font-weight: 600;
+      font-family: Roboto, sans-serif;
     }
   }
 }

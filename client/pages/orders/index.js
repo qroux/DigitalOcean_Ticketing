@@ -3,28 +3,19 @@ import Link from 'next/link';
 import styles from '../../styles/OrderIndex.module.scss'
 
 const OrderIndex = ({ currentUser, orders }) => {
-  const orderList = orders.map((order) => {
-    console.log(order)
+  const orderList = orders.length <= 0 ? <div className={styles.index__orders__empty}>
+  No order yet
+</div> : orders.map((order) => {
+    console.log(orders)
     return (
       <div key={order.id} className={styles.index__orders__item}>
         <Link href="/orders/[orderId]" as={`/orders/${order.id}`}>
-          <a className={styles.index__order__link}>{order.id}</a>
+          <a className={styles.index__order__link}>ID - {order.id} <span className={styles.index__order__link__details}>/ order acces</span></a>
         </Link>
         <div className={styles.index__order__item}>{order.ticket.title}</div>
         <div className={styles.index__order__item}>{order.ticket.price}€</div>
         <div className={styles.index__order__item}>{order.status}</div>
       </div>
-
-      // <tr key={order.id}>
-      //   <td>
-      //     <Link href="/orders/[orderId]" as={`/orders/${order.id}`}>
-      //       <a>{order.id}</a>
-      //     </Link>
-      //   </td>
-      //   <td>{order.ticket.title}</td>
-      //   <td>{order.ticket.price}</td>
-      //   <td>{order.status}</td>
-      // </tr>
     );
   });
 
@@ -42,7 +33,6 @@ const OrderIndex = ({ currentUser, orders }) => {
           </div>
           <div className={styles.index__orders}>
             {orderList}
-
           </div>
           
         </div>

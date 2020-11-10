@@ -1,0 +1,68 @@
+@import './variables';
+@import './pages';
+
+.index {
+  &__layout {
+  }
+
+  &__container {
+    @include Container;
+    padding-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__status {
+    @include Container;
+    max-width: 150rem;
+    padding: 2.5rem;
+    font-size: 3rem;
+    background-color: rgba($color: white, $alpha: 0.9);
+    border-radius: 3px;
+    color: $text-dark;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__success {
+      color: green;
+    }
+
+    &__expired {
+      color: red;
+    }
+  }
+
+  &__info {
+    background-color: rgba($color: white, $alpha: 0.9);
+    color: $text-dark;
+    font-family: Roboto, sans-serif;
+    border-radius: 3px;
+
+    padding: 5rem;
+
+    &__timer {
+      font-size: 2rem;
+    }
+
+    &__splitter {
+      margin: 2rem 0;
+    }
+
+    &__price {
+      margin: 2rem 0;
+    }
+
+    &__stripe {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
