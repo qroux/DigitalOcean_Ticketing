@@ -3,16 +3,29 @@ import NewTicket from './tickets/new';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-const LandingPage = ({ currentUser, tickets }) => {
-  const ticketList = tickets.map((ticket) => {
+export default function LandingPage({ currentUser, tickets }) {
+  const link = currentUser ?
+    <Link href="/tickets/new"><a className={styles.empty__link}>Sell yours</a></Link> :
+    <Link href="/auth/signin"><a className={styles.empty__link}>Sell yours</a></Link>;
+  
+ 
+
+  const ticketList = tickets.length <= 0 ?
+  <div className={styles.empty__container}>
+    <img src='/empty.svg' className={styles.empty__img}/>
+    <h4 className={styles.empty__heading}>No ticket yet. {link}</h4>
+    </div> :
+  tickets.map((ticket) => {
     return (
-      <div className={styles.tickets__item} key={ticket.id}>
-        <img src="/tickets.svg" alt="ticket.svg" className={styles.tickets__item__icon} />
-        <div className={styles.tickets__item__title}>{ticket.title}</div>
-        <div className={styles.tickets__item__price}>{ticket.price}€</div>
-        <Link href="/tickets/[ticketId]" as={`/tickets/${ticket.id}`}>
-          <a><img src="/description.svg" alt="" className={styles.tickets__item__click}/></a>
-        </Link>        
+      <div className={styles.tickets__items}>
+        <div className={styles.tickets__item} key={ticket.id}>
+          <img src="/tickets.svg" alt="ticket.svg" className={styles.tickets__item__icon} />
+          <div className={styles.tickets__item__title}>{ticket.title}</div>
+          <div className={styles.tickets__item__price}>{ticket.price}€</div>
+          <Link href="/tickets/[ticketId]" as={`/tickets/${ticket.id}`}>
+            <a><img src="/description.svg" alt="" className={styles.tickets__item__click}/></a>
+          </Link>        
+        </div>
       </div>
     );
   });
@@ -96,4 +109,4 @@ LandingPage.getInitialProps = async (context, client, currentUser) => {
   return { tickets: data };
 };
 
-export default LandingPage;
+// export default LandingPage;
