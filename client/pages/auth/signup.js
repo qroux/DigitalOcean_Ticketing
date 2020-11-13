@@ -4,8 +4,6 @@ import Router from 'next/router';
 import { motion } from 'framer-motion';
 import useRequest from '../../hooks/use-request';
 
-
-
 export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

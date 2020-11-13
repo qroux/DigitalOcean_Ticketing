@@ -21,7 +21,7 @@
 
 .tickets {
   &__layout {
-    background-color: $bg-light;
+    background-color: rgba($bg-light, 0.849);
     min-height: 30vh;
   }
   &__container {
@@ -49,7 +49,7 @@
     background-color: $bg-light;
     color: $text-dark;
     font-size: 3rem;
-    font-family: Roboto, sans-serif;
+    font-family: Roboto;
     box-shadow: 0 1rem 2rem rgba($color: black, $alpha: 0.2);
 
     display: flex;

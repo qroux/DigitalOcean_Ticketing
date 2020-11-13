@@ -23,9 +23,9 @@ export default function SignIn() {
 
   return (
     <motion.div
-      initial={{ y: '30px' }}
-      animate={{ y: '0px' }}
-      exit={{ y: '30px' }}
+      initial={{ opacity: 0, y: '30px' }}
+      animate={{ opacity: 1, y: '0px' }}
+      exit={{ opacity: 0, y: '30px' }}
     >
       <div className={styles.form__layout}>
         <div className={styles.form__container}>

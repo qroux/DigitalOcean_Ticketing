@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default ({ req }) => {
+export default function BuildClient({ req }){
   if (typeof window === 'undefined') {
     // from Server
     const url = 'http://ticketswapping.xyz/';
