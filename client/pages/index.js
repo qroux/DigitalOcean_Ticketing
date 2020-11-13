@@ -6,9 +6,7 @@ import { motion } from 'framer-motion';
 export default function LandingPage({ currentUser, tickets }) {
   const link = currentUser ?
     <Link href="/tickets/new"><a className={styles.empty__link}>Sell yours</a></Link> :
-    <Link href="/auth/signin"><a className={styles.empty__link}>Sell yours</a></Link>;
-  
- 
+    <Link href="/auth/signin"><a className={styles.empty__link}>Sell yours</a></Link>; 
 
   const ticketList = tickets.length <= 0 ?
   <div className={styles.empty__container}>
