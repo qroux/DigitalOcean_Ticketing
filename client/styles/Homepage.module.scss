@@ -21,7 +21,7 @@
 
 .tickets {
   &__layout {
-    background-color: $bg-light;
+    background-color: rgba($bg-light, 0.9);
     min-height: 30vh;
   }
   &__container {

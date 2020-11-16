@@ -33,7 +33,6 @@ export default function NewTicket() {
             <div className={styles.form__layout}>
         <div className={styles.form__container}>
           <div className={styles.form__left}>
-            {/* <h3 className={styles.form__left__heading}>Welcome</h3> */}
             <img src="/tickets.svg" alt="ticket.svg" className={styles.form__left__img}/>
 
           </div>

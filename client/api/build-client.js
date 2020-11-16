@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export default ({ req }) => {
+export default function buildClient({ req }) {
   if (typeof window === 'undefined') {
     // from Server
-    const url = 'http://ticketswapping.xyz/';
-    // const url = 'http://nginx-ingress-controller.kube-system.svc.cluster.local';
+    let url = 'http://ticketswapping.xyz/';
+    // url = 'http://nginx-ingress-controller.kube-system.svc.cluster.local';
 
     //   url = 'http://ticketswapping.xyz/';
 
