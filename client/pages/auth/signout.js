@@ -3,7 +3,7 @@ import Router from 'next/router';
 import useRequest from '../../hooks/use-request';
 import { motion } from 'framer-motion';
 
-export default function SignOut(){
+export default () => {
   const { doRequest, errors } = useRequest({
     url: '/api/users/signout',
     method: 'post',

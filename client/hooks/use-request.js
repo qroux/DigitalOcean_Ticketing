@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import styles from '../styles/Error.module.scss'
 
-export default function UseRequest({ url, method, body, onSuccess }){
+export default ({ url, method, body, onSuccess }) => {
   const [errors, setErrors] = useState(null);
 
   const doRequest = async (props = {}) => {
