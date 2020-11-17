@@ -5,6 +5,7 @@
 
 **NB: type "thisisunsafe" on your keyboard to pass the security prompt (website have no sll yet)**
 
+![Alt text](client/public/ticketswapping.png?raw=true "Title")
 ---
 
 <h3>User journey</h3>
