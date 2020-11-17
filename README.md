@@ -1,7 +1,21 @@
-<h1>Dockerized MircroService Architecture</h1>
+<h1>Ticket Market Place with reservation system</h1>
+<h3>Dockerized MircroService Architecture</h3>
 
 <h2>http://www.ticketswapping.xyz/</h2>
 
+**NB: type "thisisunsafe" on your keyboard to pass the security prompt (website have no sll yet)**
+
+---
+
+<h3>User journey</h3>
+
+1. User can register himself with email and password, login and logout
+2. User can add his ticket to the market place
+3. User **CAN RESERVE** a ticket for 15min. **Reservation is lost if the payment is not completed within 15min**
+4. User can pay through **STRIPE** with his credit card to obtain the ticket
+5. User **CANNOT** buy a ticket already reserved by another person **UNLESS** the 15min delay to pay expire
+
+---
 
 <h3>Stack</h3>
 
