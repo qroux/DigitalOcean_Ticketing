@@ -32,9 +32,6 @@
 <h3>Services List</h3>
 
 - **common**: library that enable each service to decode JWT and avoid auth-service dependency
-
----
-
 - **auth**: register users + generate JWT
 - **tickets**: create tickets with validations(title and positiv price) + authenticated user
 - **orders**: create orders if (authenticated user + ticket not already reserved/bought)
