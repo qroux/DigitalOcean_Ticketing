@@ -17,6 +17,24 @@
 
 ---
 
+<h3>Deployment</h3>
+
+- **cloud provider**: DigitalOcean
+- **Run**: Kubernetes
+
+<h3>GitHub WorkFlow</h3>
+
+1. pull request
+2. unit test running for modified service/s
+3. merging
+4. Github Action deployment:
+    - **build** service's Docker image
+    - **push** to docker hub
+    - **run** doctl
+    - **restart** service deployment
+    
+---
+
 <h3>Stack</h3>
 
 - **Front**: React | Next.js
@@ -39,19 +57,5 @@
 - **payments**: handle stripe response from client to update ticket status to 'paid' or back to 'available'
 
 
-<h3>Deployment</h3>
 
-- **cloud provider**: DigitalOcean
-- **Run**: Kubernetes
-
-<h3>GitHub WorkFlow</h3>
-
-1. pull request
-2. unit test running for modified service/s
-3. merging
-4. Github Action deployment:
-    - **build** service's Docker image
-    - **push** to docker hub
-    - **run** doctl
-    - **restart** service deployment
 
