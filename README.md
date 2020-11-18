@@ -3,7 +3,7 @@
 
 <h2>http://www.ticketswapping.xyz/</h2>
 
-**NB: type "thisisunsafe" on your keyboard to pass the security prompt (website have no sll yet)**
+**NB: type "thisisunsafe" on your keyboard to pass the security prompt (website have no ssl yet)**
 
 ![Alt text](client/public/ticketswapping.png?raw=true "Title")
 ---
