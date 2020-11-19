@@ -14,8 +14,7 @@ export default function LandingPage({ currentUser, tickets }) {
     <h4 className={styles.empty__heading}>No ticket yet. {link}</h4>
     </div> :
   tickets.map((ticket) => {
-    return (
-      <div className={styles.tickets__items}>
+    return (      
         <div className={styles.tickets__item} key={ticket.id}>
           <img src="/tickets.svg" alt="ticket.svg" className={styles.tickets__item__icon} />
           <div className={styles.tickets__item__title}>{ticket.title}</div>
@@ -24,7 +23,6 @@ export default function LandingPage({ currentUser, tickets }) {
             <a><img src="/description.svg" alt="" className={styles.tickets__item__click}/></a>
           </Link>        
         </div>
-      </div>
     );
   });
 
