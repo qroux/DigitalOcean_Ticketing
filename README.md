@@ -17,7 +17,7 @@
 2. User can add his ticket to the market place
 3. User **CAN RESERVE** a ticket for 15min. **Reservation is lost if the payment is not completed within 15min**
 4. User can pay through **STRIPE** with his credit card to obtain the ticket
-5. User **CANNOT** buy a ticket already reserved by another person **UNLESS** the 15min delay to pay expire
+5. User **CANNOT** buy a ticket already reserved by another person **UNLESS** the 15min delay to pay expired
 
 ---
 
